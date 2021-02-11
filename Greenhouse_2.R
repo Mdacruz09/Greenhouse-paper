@@ -31,7 +31,7 @@ p1.1 <-ggplot(data=DS, aes(x=Treatment, y=Root_length_cm)) +
   geom_text(x=3, y=29, label="a", color="black", size = 3.5)+
   geom_text(x=4, y=36, label="a", color="black", size = 3.5)
 p1.2 <-  ggplot(data=DR, aes(x=Treatment, y=Root_length_cm)) + 
-  geom_bar(stat="identity", width = 0.5, fill= "lightcoral",position=position_dodge())+
+  geom_bar(stat="identity", width = 0.5, fill= "olivedrab3",position=position_dodge())+
   ggtitle(expression (paste( italic("Raphanus sativus")," ")))+
   theme(plot.title = element_text(hjust = 0.5))+
   geom_text(x=1, y=16, label="a", color="black", size = 3.5)+
@@ -44,10 +44,10 @@ library(ggpubr)
 
 
 cowplot::plot_grid(p1.1, p1.2)+
-  labs(title=expression(paste("Effect of drought and salinity on Root Lengtht in ", italic("Sonchus oleraceus "),"and",italic(" Raphanus sativus "),
-                              "after 50 days")))+
-  theme(plot.title = element_text(face="bold"))+
-  theme(plot.title = element_text(lineheight = 0.9, vjust = 8))+
+  # labs(title=expression(paste("Effect of drought and salinity on Root Lengtht in ", italic("Sonchus oleraceus "),"and",italic(" Raphanus sativus "),
+  #                             "after 50 days")))+
+  # theme(plot.title = element_text(face="bold"))+
+  # theme(plot.title = element_text(lineheight = 0.9, vjust = 8))+
   theme(plot.margin=margin(21,15,4,4))
 
 #analyses and statistical differences
@@ -92,7 +92,7 @@ pa <- ggplot(data=DS, aes(x=Treatment, y=Fresh_weight_g)) +
   geom_text(x=3, y=2.5, label="a", color="black", size = 3.5)+
   geom_text(x=4, y=1.9, label="b", color="black", size = 3.5)
 pe<- ggplot(data=DR, aes(x=Treatment, y=Fresh_weight_g)) + 
-  geom_bar(stat="identity", width = 0.5, fill= "lightcoral",position=position_dodge())+
+  geom_bar(stat="identity", width = 0.5, fill= "olivedrab3",position=position_dodge())+
   ggtitle(expression (paste( italic("Raphanus sativus")," ")))+
   theme(plot.title = element_text(hjust = 0.5))+
   theme(axis.title.x=element_blank(),axis.text.x=element_blank())+
@@ -111,7 +111,7 @@ pi <- ggplot(data=DS, aes(x=Treatment, y=Dry_weight_g)) +
   geom_text(x=3, y=0.6, label="a", color="black", size = 3.5)+
   geom_text(x=4, y=0.4, label="b", color="black", size = 3.5)
 po <- ggplot(data=DR, aes(x=Treatment, y=Dry_weight_g)) + 
-  geom_bar(stat="identity", width = 0.5, fill= "lightcoral",position=position_dodge())+
+  geom_bar(stat="identity", width = 0.5, fill= "olivedrab3",position=position_dodge())+
   theme(plot.title = element_text(hjust = 0.5))+
   theme(axis.title.y=element_blank())+
   ylim(0, 0.9)+
@@ -124,10 +124,10 @@ library(ggplot2)
 library(cowplot)
 
 cowplot::plot_grid(pa, pe, pi, po)+
-  labs(title=expression(paste("Effect of drought and salinity on Fresh and Dry Weight in ", italic("Sonchus oleraceus "),"and",italic(" Raphanus sativus "),
-                 "after 50 days")))+
-  theme(plot.title = element_text(face="bold"))+
-  theme(plot.title = element_text(lineheight = 0.9, vjust = 8))+
+  # labs(title=expression(paste("Effect of drought and salinity on Fresh and Dry Weight in ", italic("Sonchus oleraceus "),"and",italic(" Raphanus sativus "),
+  #                "after 50 days")))+
+  # theme(plot.title = element_text(face="bold"))+
+  # theme(plot.title = element_text(lineheight = 0.9, vjust = 8))+
   theme(plot.margin=margin(21,15,4,4))
 
 
