@@ -1,3 +1,12 @@
+##Packages needed
+# install.packages("readxl")
+# install.packages("ggplot2")
+# install.packages("ggpubr")
+# install.packages("lmtest")
+# install.packages("agricolae")
+# install.packages("cowplot")
+
+
 #Data for one measurement variables.
 
 library(readxl)
@@ -34,7 +43,7 @@ p1.2 <-  ggplot(data=DR, aes(x=Treatment, y=Root_length_cm)) +
 library(ggpubr)
 
 
-plot_grid(p1.1, p1.2)+
+cowplot::plot_grid(p1.1, p1.2)+
   labs(title=expression(paste("Effect of drought and salinity on Root Lengtht in ", italic("Sonchus oleraceus "),"and",italic(" Raphanus sativus "),
                               "after 50 days")))+
   theme(plot.title = element_text(face="bold"))+
@@ -114,7 +123,7 @@ po <- ggplot(data=DR, aes(x=Treatment, y=Dry_weight_g)) +
 library(ggplot2)
 library(cowplot)
 
-plot_grid(pa, pe, pi, po)+
+cowplot::plot_grid(pa, pe, pi, po)+
   labs(title=expression(paste("Effect of drought and salinity on Fresh and Dry Weight in ", italic("Sonchus oleraceus "),"and",italic(" Raphanus sativus "),
                  "after 50 days")))+
   theme(plot.title = element_text(face="bold"))+

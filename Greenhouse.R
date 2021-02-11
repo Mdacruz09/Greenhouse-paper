@@ -1,9 +1,16 @@
+##Packages needed
+# install.packages("readxl")
+# install.packages("ggplot2")
+# install.packages("ggpubr")
+# install.packages("lmtest")
+# install.packages("agricolae")
+
 # Data for variables taken over 50 days 
 
 library(readxl)
 
 Data1 <-read_excel("Data.xlsx")
-View(Data)
+View(Data1)
 
 #Subset for weed or crop
 
